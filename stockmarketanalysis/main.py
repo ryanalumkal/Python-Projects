@@ -18,7 +18,7 @@ def main():
         soup = BeautifulSoup(page.text, "html.parser")
         company = soup.find('div',{'class': 'zzDege'}).text
         price = soup.find('div', {'class': 'YMlKec fxKbKc'} ).text
-        after_hours_down = soup.find('span', {'class': 'JwB6zf'}).text # after hours percentage, change
+        after_hours_down = soup.find('span', {'class': 'JwB6zf'}).text # after hours percentage, change to current percentage
         print(f"\nCompany: {company}")
         print(f"Price: {price}")
         print(f"After Hours:{after_hours_down}")
