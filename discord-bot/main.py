@@ -29,4 +29,4 @@ https://discordpy.readthedocs.io/en/stable/ext/commands/commands.html
         await message.channel.send('Hello!')
 """
 if __name__ == '__main__':
-    client.run('OTk0NzYwODczNDU1Mzk0ODU3.GJfoH1.J4gNv6PFzlgSloBEek_4kw7WMhqxhl28kzsJNE')
+    client.run('')
