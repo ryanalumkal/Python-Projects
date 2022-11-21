@@ -19,7 +19,11 @@ def main():
     try:
         soup = BeautifulSoup(page.text, "html.parser")
         
-        company = soup.find('div',{'class': 'zzDege'}).
+        company = soup.find('div',{'class': 'zzDege'}).text
+
+        ticker = soup.find('div', {'class': 'PdOqHc'}).text.split(' ')[0].replace('Home', '').split('•')[0] # Get company from Home > COMPANY • PLATFORM
+
+        platform = soup.find('div', {'class': 'PdOqHc'}).text.split(' ')[2].split('•')[0] # Get platform from Home > COMPANY • PLATFORM
         
         price = soup.find('div', {'class': 'YMlKec fxKbKc'} ).text
 
@@ -32,6 +36,7 @@ def main():
 
         after_hours_down = soup.find('span', {'class': 'JwB6zf'}).text # after hours percentage, change to current percentage
         print(f"\nCompany: {company}")
+        print(f"Ticker: {ticker}, trading on {platform}")
         print(f"Price: {price}")
         print(f"After Hours:{after_hours_down}")
         print(f"Year To Date: {YTD}")
