@@ -1,2 +1,5 @@
-# Python-Clock
-Digital Clock made in Python using Tkinter 
+# Projects I have made in Python
+
+### Discord Bot
+### Python Clock
+### Stock Market Analysis

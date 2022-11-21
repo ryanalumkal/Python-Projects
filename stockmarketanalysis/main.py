@@ -2,6 +2,7 @@
 
 import requests
 from bs4 import BeautifulSoup
+# maybe create a graph? or create a GUI that updates live?
 
 URL = [
 "https://www.google.com/finance/quote/TSLA:NASDAQ?hl=en", 
@@ -19,13 +20,16 @@ def main():
         
         company = soup.find('div',{'class': 'zzDege'}).text
         price = soup.find('div', {'class': 'YMlKec fxKbKc'} ).text
+
         after_hours_down = soup.find('span', {'class': 'JwB6zf'}).text # after hours percentage, change
 
         ytd_soup = BeautifulSoup(requests.get(URL[i] + '&window=YTD').text, "html.parser")
     
-    # Prices
+       # Prices
         YTD = ytd_soup.find('div', {'class': 'JwB6zf'}).text
 
+
+        after_hours_down = soup.find('span', {'class': 'JwB6zf'}).text # after hours percentage, change to current percentage
         print(f"\nCompany: {company}")
         print(f"Price: {price}")
         print(f"After Hours:{after_hours_down}")
