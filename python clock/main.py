@@ -6,8 +6,8 @@ from datetime import datetime
 
 def update_clock(): #Time
     now = datetime.now() 
-    current_time = now.strftime("%H:%M:%S %p") #current time + pm/am
-    time = Label(win, text=current_time, font= ('ds-digital',150), bg= "black", fg= "green") #label for time
+    current_time = now.strftime("%I:%M:%S %p") #current time + pm/am
+    time = Label(win, text=current_time, font= ('ds-digital',125), bg= "black", fg= "green") #label for time
     time.pack(fill= BOTH, expand= True)
     time.after(1000, lambda:[time.forget(),update_clock()]) #resets time every second 
     
