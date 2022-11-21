@@ -2,7 +2,7 @@
 
 import requests
 from bs4 import BeautifulSoup
-
+# maybe create a graph? or create a GUI that updates live?
 URL = [
 "https://www.google.com/finance/quote/TSLA:NASDAQ?hl=en", 
 "https://www.google.com/finance/quote/AAPL:NASDAQ?hl=en",
