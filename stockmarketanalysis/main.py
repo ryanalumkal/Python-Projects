@@ -1,4 +1,4 @@
-# By: Ryan Alumkal
+# By: Ryan Alumkal and Christian F.
 
 import requests
 from bs4 import BeautifulSoup
