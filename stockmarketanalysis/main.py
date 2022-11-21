@@ -23,7 +23,7 @@ def main():
         print(f"Price: {price}")
         print(f"After Hours:{after_hours_down}")
     except:
-        print(f"\nError with {URL}")
+        print(f"\nError with {URL[i]}")
 
 if __name__ == '__main__':
     for i in range(len(URL)):
